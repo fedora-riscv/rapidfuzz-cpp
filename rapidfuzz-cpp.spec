@@ -65,6 +65,9 @@ Provides: %{name}-static = %{version}
 %autosetup -p1
 # Change the group name, mainly so that the manpage is named meaningfully
 sed -i 's/defgroup Fuzz Fuzz/defgroup rapidfuzz rapidfuzz/' rapidfuzz/fuzz.hpp
+# The older LLVM (like in < Fedora 36) doesn't support march=native on some
+# architectures.
+sed -i 's/ -march=native//' fuzzing/CMakeLists.txt
 # Enable man generation, but don't enable the links since it produces files
 # which aren't named specifically for rapidfuzz, such as "ratio" and
 # "partial_ratio".
