@@ -4,3 +4,4 @@
 *.log
 /review-rapidfuzz-cpp
 /x86_64
+/rapidfuzz-cpp-2.2.3.tar.gz
