@@ -18,7 +18,7 @@ Version: 1.10.4
 %forgemeta
 
 Name: rapidfuzz-cpp
-Release: %{autorelease} -e 0.riscv64
+Release: %autorelease -e 0.riscv64
 License: MIT
 Summary: A fast string matching header-only library for C++
 URL: %{forgeurl}
