@@ -18,13 +18,16 @@ Version: 1.10.4
 %forgemeta
 
 Name: rapidfuzz-cpp
-Release: %{autorelease}
+Release: %{autorelease} -e 0.riscv64
 License: MIT
 Summary: A fast string matching header-only library for C++
 URL: %{forgeurl}
 Source: %{forgesource}
 # Upstream PR: https://github.com/maxbachmann/rapidfuzz-cpp/pull/99
 Patch0: rapidfuzz-cpp-1.10.4-overflow.patch
+
+# Remove -march=native
+Patch9: rapidfuzz-cpp-1.10.4-remove-march-native.patch
 
 BuildRequires: cmake
 BuildRequires: doxygen
